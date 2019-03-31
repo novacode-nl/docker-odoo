@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  db:
+    build: ./docker/db
+    # volumes:
+    #   # docker-compose restart db (reload config too)
+    #   - ./docker/db/postgresql.conf:/var/lib/postgresql/data/postgresql.conf
+
+  odoo:
+    build:
+      context: ./
+      dockerfile: ./docker/odoo/Dockerfile
+    command: ./runit
+    volumes:
+      - ./odoo:/odoo
+      - ./docker/odoo/odoo.conf:/odoo.conf
+      - ./docker/odoo/runit:/runit
+    depends_on:
+      - db
+    ports:
+      - 8069:8069

@@ -1,0 +1,4 @@
+#!/bin/sh
+cd odoo
+pip3 install -Ur requirements.txt
+python3 ./odoo-bin -c /odoo.conf
