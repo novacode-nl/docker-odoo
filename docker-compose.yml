@@ -14,7 +14,8 @@ services:
     command: ./runit
     volumes:
       - ./odoo:/odoo
-      - ./docker/odoo/odoo.conf:/odoo.conf
+      - ./addons:/addons
+      - ./odoo.conf:/odoo.conf
       - ./docker/odoo/runit:/runit
     depends_on:
       - db
