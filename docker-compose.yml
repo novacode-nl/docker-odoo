@@ -12,6 +12,8 @@ services:
       context: ./
       dockerfile: ./docker/odoo/Dockerfile
     command: ./runit
+    stdin_open: true
+    tty: true
     volumes:
       - ./odoo:/odoo
       - ./addons:/addons

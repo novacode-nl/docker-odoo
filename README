@@ -39,6 +39,20 @@ Following commands/actions can run at same time.
 
 - `./run`
 
+## Python debugger (pdb)
+
+The debugger is running inside the container, so we need to attach into the container to use it.
+
+1. Find the container id using docker container ps and copy the first two or three letters of the container id column.
+2. Use the command `docker attach CONTAINER_ID` to attach to the container.
+
+Ensure following are set in `docker-compose.yml`:
+
+```
+stdin_open: true
+tty: true
+```
+
 ## (?) Filesystem mapping Docker Container => Host
 
 Following on host:
