@@ -39,6 +39,10 @@ Following commands/actions can run at same time.
 
 - `./run`
 
+## Wkhtmltopdf
+
+In case of troubles (layout, styling), rename or remove the `report.url` System parameter.
+
 ## Python debugger (pdb)
 
 The debugger is running inside the container, so we need to attach into the container to use it.
