@@ -1,4 +1,4 @@
-# odoo-docker
+# docker-odoo
 
 ## Requirements
 
