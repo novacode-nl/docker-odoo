@@ -1,2 +1,2 @@
 #!/bin/sh
-docker-compose exec odoo /odoo/odoo-bin shell -c odoo.conf -d odoo
+docker-compose exec odoo /odoo/odoo-bin shell -c odoo.conf -d $1
