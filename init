@@ -4,4 +4,5 @@ set -e
 
 # git clone repo's
 
-docker-compose build
+# --no-cache to avoid mirror errors (not found) etc.
+docker-compose build  --no-cache
