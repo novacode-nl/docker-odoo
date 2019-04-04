@@ -16,10 +16,10 @@ services:
     tty: true
     volumes:
       - ./odoo:/odoo
-      - ./addons:/addons
-      - ./odoo.conf:/odoo.conf
+      - ./docker/odoo/odoo.conf:/odoo.conf
       - ./docker/odoo/runit:/runit
     depends_on:
       - db
     ports:
+      # Keep ports equal to ensure `report.url` works.
       - 8069:8069
